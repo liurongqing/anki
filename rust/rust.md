@@ -2,15 +2,16 @@
 
 1. 一种是速度很快、长度固定的 `array` 数组
 
-    ```rust
-    let a = [1, 2, 3, 4];
-    ```
+   ```rust
+   let a = [1, 2, 3, 4];
+   ```
 
 2. 一种是可动态增长的但是有性能损耗的 `Vector` 动态数组
 
-    ```rust
-    let mut v: Vec<i8> = vec![1, 2, 3];
-    ```
+   ```rust
+   let mut v: Vec<i8> = vec![1, 2, 3];
+   ```
+
 ## 2. if else 基本写法
 
 ```rust
@@ -98,4 +99,30 @@ let result = loop {
 
     println!("result is {}", result);
 }
+```
+
+## 10.声明一个变量
+
+```rust
+let x = 5;
+```
+
+## 11. 声明一个可变变量
+
+```rust
+let mut x = 5;
+x = 6;
+```
+
+## 12. 忽略下划线开头的未使用的变量
+
+```rust
+let _x = 5;
+```
+
+## 13. 变量解构
+
+```rust
+let (a, mut b) : (bool, bool) = (true, false);
+b = true;
 ```
