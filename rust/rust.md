@@ -312,14 +312,14 @@ let s2 = &s[5..9]; // 索引5-8
 x.. 等价于 位置 x 到数据结束    
 .. 等价于 0 到结束  
 
-## Rust 常用的字符串类型有 &str 和 String
+## 34. Rust 常用的字符串类型有 &str 和 String
 
 ```rust
 let s1: &str = "hello"; // &str
 let s2: String = String::from("hello");
 ```
 
-## 数组切片
+## 35. 数组切片
 
 ```rust
 let arr = [1, 3, 5, 7, 9];
@@ -327,4 +327,91 @@ let part = &arr[0..3];
 for i in part {
     println!("{}", i);
 }
+```
+
+## 36. 最简单的结构体
+
+```rust
+// 定义结构体
+struct Site {
+    domain: String,
+    name: String
+}
+// 结构体实例
+let site1 = Site {
+    domain: String::from("hello"),
+    name: String::from("haha")
+}
+```
+
+## 37. 复制一个结构体实例
+
+```rust
+let site1 = Site {
+    domain: String::from("domain1"),
+    name: String::from("name1")
+}
+
+// 至少要重新设定一个值
+let site2 = Site {
+    domain: String::from("domain2"),
+    ..site1
+}
+```
+
+## 38. 简单的元组结构体
+
+```rust
+struct Color(u8, u8, u8);
+
+let black = Color(0, 0, 0);
+black.0 
+black.1
+black.2
+```
+
+## 39. 打印复杂类型
+
+```rust
+// 第一行导入调试库
+#[derive(Debug)]
+
+struct Reactangle {
+    width: u32,
+    height: u32
+}
+fn main() {
+    let rect1 = Reactangle {
+        width: 10,
+        height: 10
+    }
+    println!("{:?}", rect1);
+    println!("{:#?}", rect1);
+}
+```
+
+## 40. 最简单的结构体方法
+
+```rust
+struct Rectangle {
+    width: u32,
+    height: u32
+}
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+}
+
+fn main() {
+    let rect1 = Rectangle { width: 10, height: 20 };
+    println!("{}", rect1.area())
+}
+```
+
+## 41. 单元结构体
+
+```rust
+// 没有身体的结构体为单元结构
+struct UnitStruct;
 ```
