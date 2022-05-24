@@ -146,7 +146,7 @@ b = true;
 
 ```bash
 # 生成文档，并打开在浏览器上
-cargo doc --open 
+cargo doc --open
 ```
 
 ## 16. 声明一个常量
@@ -228,7 +228,7 @@ println!("{}", b); // 10
 
 > 变量的值存在于内存中
 
-## 26. 变量与数据交互方式(移动Move与克隆Clone)
+## 26. 变量与数据交互方式(移动 Move 与克隆 Clone)
 
 ```rust
 // 移动
@@ -308,9 +308,9 @@ let s2 = &s[5..9]; // 索引5-8
 
 ## 33. `..` 表示范围的语法
 
-..y 等价于 0..y     
-x.. 等价于 位置 x 到数据结束    
-.. 等价于 0 到结束  
+..y 等价于 0..y  
+x.. 等价于 位置 x 到数据结束  
+.. 等价于 0 到结束
 
 ## 34. Rust 常用的字符串类型有 &str 和 String
 
@@ -365,7 +365,7 @@ let site2 = Site {
 struct Color(u8, u8, u8);
 
 let black = Color(0, 0, 0);
-black.0 
+black.0
 black.1
 black.2
 ```
@@ -415,3 +415,61 @@ fn main() {
 // 没有身体的结构体为单元结构
 struct UnitStruct;
 ```
+
+## 最简单的枚举
+
+```rust
+enum Book {
+    Papery,
+    Electronic
+}
+```
+
+## 42. match 使用
+
+可以使用在枚举、整数、浮点数、字符、字符串切片引用进行分支选择
+
+## 43. match 在枚举中的使用
+
+```rust
+enum Book {
+    Papery(u32),
+    Electronic {url: String},
+}
+
+let book = Book::Papery(1001);
+
+match book {
+    Book::Papery(i) => {},
+    Book::Electronic { url } => {},
+}
+```
+
+## 44. match 在字符中的使用
+
+```rust
+let t = "abc";
+match t {
+    "abc" => println!("yes"),
+    _ => {},
+}
+```
+
+## 45. if let 语法 
+
+if let 匹配值 = 源变量 { 
+    语句块
+}
+
+```rust
+let i = 0;
+if let 0 = i {
+    println!("zero");
+}
+```
+
+## 46. Rust 组织管理
+
+1. 箱 (Crate)
+2. 包 (Package)
+3. 模块 (Module)
