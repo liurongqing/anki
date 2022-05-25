@@ -1,4 +1,4 @@
-## 1. 常用数组分二种
+## 01. 常用数组分二种
 
 1. 一种是速度很快、长度固定的 `array` 数组
 
@@ -12,7 +12,7 @@
    let mut v: Vec<i8> = vec![1, 2, 3];
    ```
 
-## 2. if else 基本写法
+## 02. if else 基本写法
 
 ```rust
 // 如果 condition 为 true，则执行 A， 否则执行 B
@@ -24,11 +24,11 @@ if condition {
 }
 ```
 
-## 3. Rust 语言中有三种循环方式
+## 03. Rust 语言中有三种循环方式
 
 `for`、`while` 和 `loop`
 
-## 4. `for` 循环
+## 04. `for` 循环
 
 ```rust
 for i in 1..=5 {
@@ -41,7 +41,7 @@ for i in 1..=5 {
 // 5
 ```
 
-## 5. 不想用的变量用 `_` 来代替
+## 05. 不想用的变量用 `_` 来代替
 
 ```rust
 // 循环 10 次，如果不使用 _，编辑器会给个变量未使用的警告
@@ -50,7 +50,7 @@ for _ in 0..10 {
 }
 ```
 
-## 6. continue 跳出当前当次的循环
+## 06. continue 跳出当前当次的循环
 
 ```rust
 for i in 1..4 {
@@ -63,7 +63,7 @@ for i in 1..4 {
 // 3
 ```
 
-## 7. break 跳出当前的循环
+## 07. break 跳出当前的循环
 
 ```rust
 for i in 1..4 {
@@ -75,7 +75,7 @@ for i in 1..4 {
 // 1
 ```
 
-## 8. while 循环
+## 08. while 循环
 
 ```rust
 let mut n = 0;
@@ -87,7 +87,7 @@ while n < 5 {
 println!("我出来了");
 ```
 
-## 9. loop 循环 + break
+## 09. loop 循环 + break
 
 ```rust
 let mut counter = 0;
@@ -416,14 +416,6 @@ fn main() {
 struct UnitStruct;
 ```
 
-## 最简单的枚举
-
-```rust
-enum Book {
-    Papery,
-    Electronic
-}
-```
 
 ## 42. match 使用
 
@@ -474,4 +466,11 @@ if let 0 = i {
 2. 包 (Package)
 3. 模块 (Module)
 
-## 47. 错误处理
+## 47. 最简单的枚举
+
+```rust
+enum Book {
+    Papery,
+    Electronic
+}
+```
